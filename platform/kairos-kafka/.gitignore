@@ -1,0 +1,11 @@
+*.ipr
+*.iws
+*.iml
+target/*
+build/*
+*/target/*
+out/*
+dependency.txt
+.idea
+logs/*
+/target/

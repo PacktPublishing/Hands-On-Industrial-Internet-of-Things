@@ -1,0 +1,10 @@
+Package: kairos-kafka
+Version: 1.0
+Architecture: all
+Maintainer: Brian Hawkins 
+Installed-Size: 1824
+Depends: kairosdb (>= 0.9.4)
+Section: databases
+Priority: important
+Homepage: http://www.kairosdb.org/
+Description: Kafka plugin for KairosDB
