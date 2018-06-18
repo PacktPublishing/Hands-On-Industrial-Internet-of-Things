@@ -6,7 +6,7 @@ services:
  
 ###############################
 # docker run --network=iiot-net -p 9042:9042 -p 9160:9160 --name cassandra0 cassandra
- cassandra0:
+ cassandra:
   image: cassandra
   container_name: cassandra0
   ports:
@@ -16,20 +16,6 @@ services:
    - 8778:8778
   networks:
     - iiot-net
-#docker run --network=iiot-net -P -p 8080:8080 -e "CASS_HOSTS=cassandra0:9042" -e "REPFACTOR=1" iiot-book/kairosdb
- # kairosdb:
- #  image: iiot-book/kairosdb
- #  container_name: kairosdb
- #  environment:
- #   - CASS_HOSTS=cassandra0:9042
- #   - REPFACTOR=1
- #  ports:
- #   - "4242:4242"
- #   - "8080:8080"
- #  depends_on:
- #   - cassandra0
- #  networks:
- #    - iiot-net
 #docker run --network=iiot-net -it -p 1883:1883 -p 9001:9001  --name mqtt0 eclipse-mosquitto
  mqtt:
   image: eclipse-mosquitto
@@ -53,5 +39,22 @@ services:
    - mqtt
   networks:
     - iiot-net
+#docker run --network=iiot-net -P -p 8080:8080 -e "CASSANDRA_HOST_LIST=cassandra0:9042" -e "KAFKA_BOOTSTRAP_LIST=kafka0:9092" -e "REPFACTOR=1" iiot-book/kairosdb
+ kairosdb:
+  image: iiot-book/kairosdb
+  container_name: kairosdb
+  environment:
+   - CASSANDRA_HOST_LIST=cassandra0:9042
+   - KAFKA_BOOTSTRAP_LIST=192.168.0.102:9092
+   - REPFACTOR=1
+  ports:
+   - "4242:4242"
+   - "8080:8080"
+  depends_on:
+   - cassandra
+   - kafka
+  networks:
+    - iiot-net
+
 
 

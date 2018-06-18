@@ -49,21 +49,14 @@ public class KafkaModule extends AbstractModule
 
 	@Provides
 	private Consumer<byte[], byte[]> provideConsumerConnector(
-			@Named("kairosdb.kafka.zookeeper.connect") String zookeeper,
+			@Named("kairosdb.kafka.bootstrap.servers") String bootsrapserver,
 			@Named("kairosdb.kafka.group.id") String groupid, 
 			TopicParserFactory factory)
 	{
 
 		
 		Properties props = new Properties();
-		props.put("zookeeper.connect", zookeeper);
-		props.put("group.id", groupid);
-		props.put("zookeeper.session.timeout.ms", "400");
-		props.put("zookeeper.sync.time.ms", "200");
-		props.put("auto.commit.interval.ms", "1000");
-		
-
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092"); ///TBD
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootsrapserver); ///TBD
         props.put(ConsumerConfig.CLIENT_ID_CONFIG, "kafka-mqtt");
         props.put(ConsumerConfig.GROUP_ID_CONFIG, groupid);
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ByteArrayDeserializer.class);

@@ -1,0 +1,27 @@
+{
+    "start_absolute": 1349109375,
+    "end_relative": {
+        "value": 1,
+        "unit": "days"
+    },
+    "metrics": [
+        {
+            "tags": {
+                "host": [
+                    "test"
+                ]
+            },
+            "name": "archive.file.tracked",
+            "limit": 10,
+            "aggregators": [
+                {
+                    "name": "sum",
+                    "sampling": {
+                        "value": 10,
+                        "unit": "minutes"
+                    }
+                }
+            ]
+        }
+    ]
+}
