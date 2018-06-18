@@ -1,7 +1,5 @@
 package org.kairosdb.plugin.kafka;
 
-import kafka.consumer.KafkaStream;
-
 import java.util.Set;
 
 /**

@@ -1,12 +1,17 @@
 package org.kairosdb.plugin.kafka;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.google.common.base.Splitter;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
-
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  Created by bhawkins on 2/18/14.
@@ -86,16 +91,18 @@ public class GuiceTopicParserFactory implements TopicParserFactory
 		try
 		{
 			aClass = (Class<TopicParser>) Class.forName(className);
+
+System.out.println(aClass);
+			TopicParser tp = m_injector.getInstance(aClass);
+			tp.setPropertyName(def.getPropertyName());
+			return tp;
 		}
-		catch (ClassNotFoundException e)
+		catch (Exception e)
 		{
 			e.printStackTrace();
+			return null;
 		}
 
-		TopicParser tp = m_injector.getInstance(aClass);
-		tp.setPropertyName(def.getPropertyName());
-
-		return tp;
 	}
 
 	@Override

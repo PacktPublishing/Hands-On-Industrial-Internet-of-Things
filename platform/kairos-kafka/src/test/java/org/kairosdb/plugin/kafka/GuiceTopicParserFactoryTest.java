@@ -17,7 +17,7 @@ public class GuiceTopicParserFactoryTest
 	{
 		Properties properties = new Properties();
 		properties.setProperty("kairosdb.kafka.topicparser.stringparser.class", "org.kairosdb.plugin.kafka.StringTopicParser");
-		properties.setProperty("kairosdb.kafka.topicparser.stringparser.topics", "topic1,topic2");
+		properties.setProperty("kairosdb.kafka.topicparser.stringparser.topics", "mqtt,topic2");
 		properties.setProperty("kairosdb.kafka.topicparser.stringparser.metric", "test_metric");
 		GuiceTopicParserFactory factory = new GuiceTopicParserFactory(null, properties);
 

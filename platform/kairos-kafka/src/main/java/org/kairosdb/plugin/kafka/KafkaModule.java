@@ -17,15 +17,22 @@
 package org.kairosdb.plugin.kafka;
 
 
+import java.util.Collections;
+import java.util.Properties;
+
+import org.apache.kafka.clients.consumer.Consumer;
+import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.serialization.ByteArrayDeserializer;
+import org.apache.kafka.common.serialization.IntegerDeserializer;
+import org.apache.kafka.common.serialization.StringDeserializer;
+import org.kairosdb.plugin.kafka.parser.MQTTJsonTopicParserImpl;
+import org.kairosdb.plugin.kafka.parser.StringTopicParserImpl;
+
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.google.inject.name.Named;
-import kafka.consumer.Consumer;
-import kafka.consumer.ConsumerConfig;
-import kafka.javaapi.consumer.ConsumerConnector;
-
-import java.util.Properties;
 
 public class KafkaModule extends AbstractModule
 {
@@ -36,26 +43,44 @@ public class KafkaModule extends AbstractModule
 		bind(TopicParserFactory.class).to(GuiceTopicParserFactory.class).in(Singleton.class);
 
 		//Bind your topic parser into guice.
-		bind(StringTopicParser.class);
+		bind(StringTopicParserImpl.class);
+		bind(MQTTJsonTopicParserImpl.class);
 	}
 
 	@Provides
-	private ConsumerConnector provideConsumerConnector(@Named("kairosdb.kafka.zookeeper.connect") String zookeeper,
-			@Named("kairosdb.kafka.group.id") String groupid)
+	private Consumer<byte[], byte[]> provideConsumerConnector(
+			@Named("kairosdb.kafka.zookeeper.connect") String zookeeper,
+			@Named("kairosdb.kafka.group.id") String groupid, 
+			TopicParserFactory factory)
 	{
-		return Consumer.createJavaConsumerConnector(createConsumerConfig(zookeeper, groupid));
-	}
 
-
-	private static ConsumerConfig createConsumerConfig(String zookeeper, String groupId)
-	{
+		
 		Properties props = new Properties();
 		props.put("zookeeper.connect", zookeeper);
-		props.put("group.id", groupId);
+		props.put("group.id", groupid);
 		props.put("zookeeper.session.timeout.ms", "400");
 		props.put("zookeeper.sync.time.ms", "200");
 		props.put("auto.commit.interval.ms", "1000");
+		
 
-		return new ConsumerConfig(props);
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092"); ///TBD
+        props.put(ConsumerConfig.CLIENT_ID_CONFIG, "kafka-mqtt");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, groupid);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ByteArrayDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ByteArrayDeserializer.class);
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+        
+        
+	      // Create the consumer using props.
+	      final Consumer<byte[], byte[]> consumer =
+	                                  new KafkaConsumer<>(props);
+
+	      // Subscribe to the topic.
+	      
+	      consumer.subscribe(factory.getTopics());
+	      
+	      System.out.println("Consumer Started " + consumer + " subscribed to " + factory.getTopics());
+		return consumer;
 	}
+
 }

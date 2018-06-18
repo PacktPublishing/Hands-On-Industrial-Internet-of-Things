@@ -1,11 +1,10 @@
 package org.kairosdb.plugin.kafka;
 
-import kafka.consumer.KafkaStream;
-import kafka.message.MessageAndMetadata;
+
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.streams.kstream.KStream;
 import org.kairosdb.core.DataPoint;
 import org.kairosdb.core.DataPointSet;
-import org.kairosdb.core.datastore.Datastore;
-import org.kairosdb.core.exception.DatastoreException;
 import org.kairosdb.eventbus.Publisher;
 import org.kairosdb.events.DataPointEvent;
 import org.slf4j.Logger;
@@ -18,49 +17,58 @@ public class ConsumerThread implements Runnable
 {
 	public static final Logger logger = LoggerFactory.getLogger(ConsumerThread.class);
 
-	private final String m_topic;
-	private final KafkaStream<byte[], byte[]> m_stream;
-	private final int m_threadNumber;
-	private final Publisher<DataPointEvent> m_publisher;
-	private TopicParser m_topicParser;
+	private final TopicParserFactory topicParserFactory;
+	private final ConsumerRecords<byte[], byte[]> stream;
+	private final int threadNumber;
+	private final Publisher<DataPointEvent> publisher;
 
-	public ConsumerThread(Publisher<DataPointEvent> publisher, String topic, KafkaStream<byte[], byte[]> stream, int threadNumber)
+	public ConsumerThread(Publisher<DataPointEvent> publisher, TopicParserFactory topicParserFactory, ConsumerRecords<byte[], byte[]> stream, int threadNumber)
 	{
-		m_publisher = publisher;
-		m_topic = topic;
-		m_stream = stream;
-		m_threadNumber = threadNumber;
+		this.publisher = publisher;
+		this.topicParserFactory = topicParserFactory;
+		this.stream = stream;
+		this.threadNumber = threadNumber;
 	}
 
-	public void setTopicParser(TopicParser parser)
-	{
-		m_topicParser = parser;
-	}
 
 	@Override
 	public void run()
 	{
-		Thread.currentThread().setName(this.m_topic + "-" + this.m_threadNumber);
-		logger.info("starting consumer thread " + this.m_topic + "-" + this.m_threadNumber);
-		for (MessageAndMetadata<byte[], byte[]> messageAndMetadata : m_stream)
-		{
-			try
-			{
-				logger.debug("message: " + messageAndMetadata.message());
-				DataPointSet set = m_topicParser.parseTopic(m_topic, messageAndMetadata.key(),
-						messageAndMetadata.message());
-
-				for (DataPoint dataPoint : set.getDataPoints())
-				{
-					m_publisher.post(new DataPointEvent(set.getName(), set.getTags(), dataPoint));
-				}
-
-				//m_counter.incrementAndGet();
+		Thread.currentThread().setName("TH " + this.threadNumber);
+		logger.info("starting consumer thread " + this.threadNumber);
+		
+		stream.forEach(record -> {
+			
+			/// REMOVE ME
+            System.out.printf("Consumer Record:(%s, %s, %s, %s\n",
+                    record.key(), record.value(),
+                    record.partition(), record.offset());
+            
+            /// REMOVE ME
+            
+            String topic = record.topic();
+            System.out.println(topic);
+            TopicParser parser;
+			try {
+				parser = topicParserFactory.getTopicParser(topic);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw e;
 			}
-			catch (Exception e)
+            System.out.println(parser);
+            
+			DataPointSet set = parser.parseTopic(topic, record.key(), record.value());
+
+			for (DataPoint dataPoint : set.getDataPoints())
 			{
-				logger.error("Failed to store message: " + messageAndMetadata.message(), e.getMessage());
+				DataPointEvent dte = new DataPointEvent(set.getName(), set.getTags(), dataPoint);
+				logger.info("DataPointEvent : " + dte);
+				publisher.post(dte);
 			}
-		}
+			
+
+
+        });
+		
 	}
 }
