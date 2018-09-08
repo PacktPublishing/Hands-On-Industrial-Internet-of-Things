@@ -99,5 +99,17 @@ ON dashboard.es6.js
 
 then copy the file my-ts-chart-js.html on src
 
+# Cloud
 
+Devices for Azure, AWS and GCP.
+
+# Analytics
+
+* anomaly detection analytics of airplane
+* predictive analytics with ARIMA of a refinery
+
+# Digital twin
+
+* RUL prediction with deep-learning
+* Model of a wind turbine
 

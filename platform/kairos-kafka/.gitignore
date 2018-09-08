@@ -9,3 +9,4 @@ dependency.txt
 .idea
 logs/*
 /target/
+target
