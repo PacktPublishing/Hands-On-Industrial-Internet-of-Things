@@ -1,6 +1,8 @@
 # iiot-book
 This repository provide the code of the book
 
+**Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2019**
+
 
 * platform : custom iiot platform
 * predix : custom code for Predix platfomr
