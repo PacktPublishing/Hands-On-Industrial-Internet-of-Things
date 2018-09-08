@@ -1,4 +1,4 @@
-# iiot-book
+# Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2019
 This repository provide the code of the book
 
 **Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2019**
