@@ -2,7 +2,6 @@ package org.kairosdb.plugin.kafka;
 
 
 import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.streams.kstream.KStream;
 import org.kairosdb.core.DataPoint;
 import org.kairosdb.core.DataPointSet;
 import org.kairosdb.eventbus.Publisher;
@@ -65,9 +64,6 @@ public class ConsumerThread implements Runnable
 				logger.info("DataPointEvent : " + dte);
 				publisher.post(dte);
 			}
-			
-
-
         });
 		
 	}

@@ -1,0 +1,14 @@
+
+gcloud components update
+gcloud components install cbt
+gcloud components update beta
+
+export BIGTABLE_EMULATOR_HOST=localhost:8086
+cbt -project iiot-book-local -instance iiot-book-data  createtable iiot-book-signals
+cbt -project iiot-book-local -instance iiot-book-data  createfamily iiot-book-signals signal1
+cbt -project iiot-book-local -instance iiot-book-data  set iiot-book-signals 1531639262000 signal1:value=13 signal1:quality='GOOD'
+
+cbt -project iiot-book-local -instance iiot-book-data  ls
+cbt -project iiot-book-local -instance iiot-book-data read iiot-book-signals
+
+cbt -project iiot-book-local -instance iiot-book-data deletetable iiot-book-signals

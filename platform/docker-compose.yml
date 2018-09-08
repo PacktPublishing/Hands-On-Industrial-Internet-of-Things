@@ -3,7 +3,6 @@ networks:
  iiot-net:
    driver: bridge
 services:
- 
 ###############################
 # docker run --network=iiot-net -p 9042:9042 -p 9160:9160 --name cassandra0 cassandra
  cassandra:
@@ -30,8 +29,9 @@ services:
   image: venergiac/kafka-mqtt:latest
   container_name: kafka0
   environment:
-   - KAFKA_ADVERTISED_HOST_NAME=192.168.0.102
+   - KAFKA_ADVERTISED_HOST_NAME=${EXTERNAL_IP}
    - MQTT_URI=tcp://mqtt0:1883
+   - MQTT_TOPIC=topic/#
   ports:
    - "9092:9092"
    - "2181:2181"
@@ -42,10 +42,10 @@ services:
 #docker run --network=iiot-net -P -p 8080:8080 -e "CASSANDRA_HOST_LIST=cassandra0:9042" -e "KAFKA_BOOTSTRAP_LIST=kafka0:9092" -e "REPFACTOR=1" iiot-book/kairosdb
  kairosdb:
   image: iiot-book/kairosdb
-  container_name: kairosdb
+  container_name: kairosdb0
   environment:
    - CASSANDRA_HOST_LIST=cassandra0:9042
-   - KAFKA_BOOTSTRAP_LIST=192.168.0.102:9092
+   - KAFKA_BOOTSTRAP_LIST=${EXTERNAL_IP}:9092
    - REPFACTOR=1
   ports:
    - "4242:4242"

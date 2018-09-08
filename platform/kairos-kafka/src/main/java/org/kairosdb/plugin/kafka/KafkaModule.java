@@ -17,16 +17,13 @@
 package org.kairosdb.plugin.kafka;
 
 
-import java.util.Collections;
 import java.util.Properties;
 
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.ByteArrayDeserializer;
-import org.apache.kafka.common.serialization.IntegerDeserializer;
-import org.apache.kafka.common.serialization.StringDeserializer;
-import org.kairosdb.plugin.kafka.parser.MQTTJsonTopicParserImpl;
+import org.kairosdb.plugin.kafka.iiotbook.parser.MQTTJsonTopicParserImpl;
 import org.kairosdb.plugin.kafka.parser.StringTopicParserImpl;
 
 import com.google.inject.AbstractModule;

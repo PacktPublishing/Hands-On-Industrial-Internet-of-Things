@@ -1,0 +1,15 @@
+{
+  "name": "aws-iot-sdk-browser-bundle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"bundle exists\" && exit 0"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-iot-device-sdk": "^1.0.11",
+    "aws-sdk": "^2.3.0"
+  }
+}

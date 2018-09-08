@@ -1,0 +1,14 @@
+{
+  "name": "gcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "insert-bigtable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/bigtable": "^0.15.0"
+  }
+}

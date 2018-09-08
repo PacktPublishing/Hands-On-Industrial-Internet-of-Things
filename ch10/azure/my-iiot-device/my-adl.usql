@@ -1,0 +1,26 @@
+DECLARE @now DateTime = DateTime.Now;
+DECLARE @outputfile = "/out/reports/"+@now.ToString("yyyy/MM/dd")+"-efficieny.csv";
+
+@d =  
+    EXTRACT device  string,
+            ts string,
+            temperature float,
+            flow float,
+            efficiency float,
+            date DateTime,
+            filename string
+    FROM "/out/logs/{date:yyyy}/{date:MM}/{date:dd}/{filename}.csv"
+    USING Extractors.Tsv(skipFirstNRows:1);
+
+
+@result = SELECT 
+            AVG(efficiency) AS efficiency, 
+            device, 
+            date
+          FROM @d
+          GROUP BY device, date;
+
+// The OUTPUT s
+OUTPUT @result
+TO @outputfile 
+USING Outputters.Text();

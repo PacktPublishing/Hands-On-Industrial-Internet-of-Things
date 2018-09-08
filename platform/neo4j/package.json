@@ -1,0 +1,15 @@
+{
+  "name": "neo4j",
+  "version": "1.0.0",
+  "main": "ask_for_measure.js",
+  "dependencies": {
+    "neo4j-driver": "^1.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
