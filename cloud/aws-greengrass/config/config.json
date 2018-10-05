@@ -1,0 +1,17 @@
+{
+  "coreThing" : {
+    "caPath" : "root.ca.pem",
+    "certPath" : "af91006d9b.cert.pem",
+    "keyPath" : "af91006d9b.private.key",
+    "thingArn" : "arn:aws:iot:eu-central-1:602032247067:thing/my-iiot-book-group-greengrass_Core",
+    "iotHost" : "a13ie6kt9d3nmr.iot.eu-central-1.amazonaws.com",
+    "ggHost" : "greengrass.iot.eu-central-1.amazonaws.com",
+    "keepAlive" : 600
+  },
+  "runtime" : {
+    "cgroup" : {
+      "useSystemd" : "yes"
+    }
+  },
+  "managedRespawn" : false
+}
