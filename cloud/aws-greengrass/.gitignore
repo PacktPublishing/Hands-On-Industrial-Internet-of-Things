@@ -2,3 +2,6 @@
 **\*.log
 *.gz
 aws-grengrass-samples
+Vagrantfile
+.vagrant
+*vagrant*
