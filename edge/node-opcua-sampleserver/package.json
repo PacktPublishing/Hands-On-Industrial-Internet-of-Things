@@ -1,0 +1,30 @@
+{
+  "name": "node-opcua-sampleserver",
+  "version": "0.0.56",
+  "description": "Simple OPCUA Server made with node-opcua",
+  "main": "server.js",
+  "dependencies": {
+    "node-opcua": "~0.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Etienne Rossignon <etienne.rossignon@gadz.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erossignon/node-opcua-sampleserver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/erossignon/node-opcua-sampleserver/issues"
+  },
+  "homepage": "https://github.com/erossignon/node-opcua-sampleserver",
+  "keywords": [
+    "OPC-UA",
+    "opcua",
+    "nodejs",
+    "javascript"
+  ]
+}
