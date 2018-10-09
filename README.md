@@ -10,7 +10,22 @@ This repository provide the code of the book
 * analytics : code and data for diagnostic analytics and predictive
 * digital-twin : code and data for digital twin
 
+
+# Prerequisites
+
+* Git - https://git-scm.com/downloads
+* Python 3.7 - https://www.python.org/downloads/
+* Anaconda 5.2 - https://www.anaconda.com/download/
+* Docker Community Edition - https://store.docker.com
+* JDK 1.8 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+* Git - https://git-scm.com/downloads
+* NodeJS 8+ - https://nodejs.org
+
+
+
+
 # Platform
+
 
 It contains code for a custom IIOT platform based on Kafka, Cassandra, KairosDB and Docker. Further snippet of code:
 
