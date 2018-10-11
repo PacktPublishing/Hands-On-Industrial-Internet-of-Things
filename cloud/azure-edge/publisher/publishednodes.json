@@ -1,0 +1,12 @@
+[
+  {
+    "EndpointUrl": "opc.tcp://opcuaserver:26543",
+    "OpcNodes": [
+      {
+        "ExpandedNodeId": "nsu=urn:NodeOPCUA-Server-default;s=Temperature",
+        "OpcSamplingInterval": 2000,
+        "OpcPublishingInterval": 5000
+      }
+    ]
+  }
+]

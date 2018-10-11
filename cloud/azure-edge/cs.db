@@ -1,0 +1,10 @@
+{
+    "entries": [
+        {
+            "name": "b6760a338556",
+            "id": "aa17e122-d2df-cfad-cce0-4e19041dc50e",
+            "connection-string": "HostName=iiot-book-hub-2.azure-devices.net;DeviceId=b6760a338556.proxy;SharedAccessKey=j19SFFIQ6Hld5rgm\/Wb0XOAG+NL2BMTFlJfr\/Gsws54=",
+            "version": 16778240
+        }
+    ]
+}

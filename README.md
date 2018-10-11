@@ -3,7 +3,7 @@ This repository provide the code of the book
 
 **Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2018**
 
-
+* edge (**ch6**) : edge nodejs code
 * platform (**ch8**) : custom iiot platform
 * predix (**ch9**) : custom code for Predix Platform
 * cloud : code for 
