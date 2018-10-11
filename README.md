@@ -7,9 +7,9 @@ This repository provide the code of the book
 * platform (**ch8**) : custom iiot platform
 * predix (**ch9**) : custom code for Predix Platform
 * cloud : code for 
-  * AWS (**ch10**) 
-  * GCP (**ch11**) 
-  * Azure (**ch12**)
+  * aws & aws-greengrass (**ch10**) 
+  * gcp (**ch11**) 
+  * azure & azure-edge (**ch12**)
 * analytics (**ch13**) : code and data for diagnostic analytics and predictive
 * digital-twin (**ch14**) : code and data for digital twin
 
