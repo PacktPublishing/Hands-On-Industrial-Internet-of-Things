@@ -4,11 +4,11 @@ This repository provide the code of the book
 **Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2018**
 
 
-* platform (ch8) : custom iiot platform
-* predix (ch9) : custom code for Predix Platform
-* cloud : code for AWS (ch10) , GCP (ch11) and Azure (ch12)
-* analytics (ch13) : code and data for diagnostic analytics and predictive
-* digital-twin (ch14) : code and data for digital twin
+* platform (*ch8*) : custom iiot platform
+* predix (*ch9*) : custom code for Predix Platform
+* cloud : code for AWS (*ch10*) , GCP (*ch11*) and Azure (*ch12*)
+* analytics (*ch13*) : code and data for diagnostic analytics and predictive
+* digital-twin (*ch14*) : code and data for digital twin
 
 
 # Prerequisites
