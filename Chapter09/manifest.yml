@@ -1,0 +1,20 @@
+---
+applications:
+  - name: <my name>-px-sample-app
+    buildpack: nodejs_buildpack
+    command: node --inspect server/app.js
+    path: dist
+    memory: 128M
+services:
+ - <my UAA Name>
+ - <my TS Name>
+ # - your-name-asset
+env:
+    #node_env: development
+    node_env: cloud
+    uaa_service_label : predix-uaa
+    clientId: gv-client
+    base64ClientCredential: <client:password base64>
+    loginBase64ClientCredential : <client:password base64>
+    websocketServerURL: /livestream
+    rmdDocsURL: "https://raw.githubusercontent.com/ "

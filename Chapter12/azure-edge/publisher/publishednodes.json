@@ -1,9 +1,9 @@
 [
   {
-    "EndpointUrl": "opc.tcp://opcuaserver:26543",
+    "EndpointUrl": "opc.tcp://opcuaserver:53530/OPCUA/SimulationServer",
     "OpcNodes": [
       {
-        "ExpandedNodeId": "nsu=urn:NodeOPCUA-Server-default;s=Temperature",
+        "ExpandedNodeId": "nsu=http://www.prosysopc.com/OPCUA/SimulationNodes;s=MyDevice.Pump_01.Pressure",
         "OpcSamplingInterval": 2000,
         "OpcPublishingInterval": 5000
       }
