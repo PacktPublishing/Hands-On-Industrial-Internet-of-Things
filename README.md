@@ -25,6 +25,7 @@ This repository provide the code of the book
 * Git - https://git-scm.com/downloads
 * NodeJS 8+ - https://nodejs.org
 
+***
 
 # Chapter 06
 
@@ -40,7 +41,7 @@ Edge NodeJS
 * NodeJS OPC-UA - https://github.com/node-opcua/node-opcua
 
 
-# Chapter0 8
+# Chapter 08
 
 
 It contains code for a custom I-IOT platform based on Kafka, Cassandra, KairosDB and Docker. Further snippet of code:
