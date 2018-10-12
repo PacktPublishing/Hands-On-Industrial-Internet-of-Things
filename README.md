@@ -3,7 +3,7 @@ This repository provide the code of the book
 
 **Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2018**
 
-https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11397_MockupCover.png
+![alt text](https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11397_MockupCover.png)
 
 * Chapter06 : edge nodejs code
 * Chapter08 : custom iiot platform
