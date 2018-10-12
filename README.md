@@ -131,6 +131,8 @@ then copy the file my-ts-chart-js.html on src
 
 AWS
 
+* based on https://github.com/aws-samples/aws-greengrass-samples
+
 ## GreenGrass
 
 ```

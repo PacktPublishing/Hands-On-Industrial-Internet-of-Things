@@ -1,0 +1,18 @@
+{
+  "name": "mqtt-webpack",
+  "version": "1.0.0",
+  "description": "Amazon AWS IoT Javascript Device SDK with WebPack",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+   "author": {
+     "name":"Amazon Web Services",
+     "email":"",
+     "url":"http://aws.amazon.com"
+  },
+  "dependencies": {
+    "aws-iot-device-sdk": "^2.0.0",
+    "aws-sdk": "^2.10.0",
+    "webpack":"^2.2.1"
+  }
+}

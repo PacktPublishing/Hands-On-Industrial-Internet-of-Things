@@ -1,0 +1,2 @@
+AWS IoT JavaScript SDK for Embedded Devices
+Copyright 2012-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.

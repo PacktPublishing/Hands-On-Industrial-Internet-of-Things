@@ -1,0 +1,2 @@
+export declare function dump(obj: any): void;
+export declare function dumpIf(condition: boolean, obj: any): void;

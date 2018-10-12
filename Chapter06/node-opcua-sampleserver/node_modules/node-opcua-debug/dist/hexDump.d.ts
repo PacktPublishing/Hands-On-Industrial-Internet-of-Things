@@ -1,0 +1,2 @@
+/// <reference types="node" />
+export declare function hexDump(buffer: Buffer | null, width?: number, maxSize?: number): any;

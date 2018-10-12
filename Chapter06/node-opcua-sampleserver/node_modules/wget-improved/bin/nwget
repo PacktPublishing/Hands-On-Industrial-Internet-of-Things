@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+/**
+
+Usage:
+nwget [URL] [OPTIONS]
+
+Example:
+nwget https://raw.github.com/Fyrd/caniuse/master/data.json -O /tmp/data.json
+
+**/
+
+var wget = require('../lib/wget');
+var path = require('path');
+
+var args = require('minimist')(process.argv);
+var url = args._[2]
+var output = args.O
+
+if (args.help) return console.log(`Usage: wget [URL] [OPTIONS]
+
+Download:
+  -O,  --output-document=FILE      write documents to FILE
+`)
+
+if (!url) return console.error('The first argument must be a URL to a downloadable resource (e.g. nwget https://raw.github.com/Fyrd/caniuse/master/data.json)')
+
+if (!output) return console.error('The second argument must be a file path for the downloaded resource (e.g. nwget https://raw.github.com/Fyrd/caniuse/master/data.json -O /tmp/data.json)')
+
+// console.log(url, output);
+
+var download = wget.download(url, path.resolve(output));
+
+download.on('error', function(err) {
+    console.error(err);
+});
+download.on('end', function(output) {
+    console.log(output);
+});
+download.on('progress', function(progress) {
+    console.log(progress);
+});
