@@ -32,10 +32,12 @@ Edge NodeJS
 
 ## Credits
 
-NodeJS OPC-UA - https://github.com/node-opcua/node-opcua
-Docker Edge - https://www.docker.com/solutions/docker-edge
-Python OPC-UA - https://python-opcua.readthedocs.io/en/latest/
-OPC Foundation - https://opcfoundation.org/﻿
+* Docker Edge - https://www.docker.com/solutions/docker-edge
+* Python OPC-UA - https://python-opcua.readthedocs.io/en/latest/
+* OPC Foundation - https://opcfoundation.org/﻿
+
+## Code based on
+* NodeJS OPC-UA - https://github.com/node-opcua/node-opcua
 
 
 # Chapter08
@@ -106,6 +108,8 @@ docker run --network=iiot-net -P -p 8080:8080 -e "CASS_HOSTS=XXXX:9042" -e "REPF
 * Apache Kafka 1.0 Cookbook - Raúl Estrada - December 2017 – Packt
 * Learning Apache Cassandra - Second Edition - Sandeep Yarabarla - April 2017 – Packt
 * Learning Neo4j 3.x - Second Edition - Jérôme Baton, Rik Van Bruggen - October 2017 - Packt
+
+## Code Based on
 * https://github.com/wurstmeister/kafka-docker
 * https://github.com/wangdrew/docker-kairosdb
 * https://github.com/kairosdb/kairosdb
@@ -143,18 +147,20 @@ ON dashboard.es6.js
 then copy the file my-ts-chart-js.html on src
 
 ## Credits
+* Predix Meridium Asset model - https://www.meridium.com/secure/documentation/Help/Unified_V1020/Default/Subsystems/PredixAPM_Assets/Content/am_apm_ingest_assets3/c_apm_asset_about_asset_model.htm
 
-
-* https://www.predix-ui.com/px-sample-app/
+## Code Based on
 * https://github.com/predixdesignsystem/px-sample-app
-* • Predix Meridium Asset model - https://www.meridium.com/secure/documentation/Help/Unified_V1020/Default/Subsystems/PredixAPM_Assets/Content/am_apm_ingest_assets3/c_apm_asset_about_asset_model.htm
+* https://www.predix-ui.com/px-sample-app/
 
 # Chapter10
 
 AWS
 
 ## Credits
-* AWs Samples https://github.com/aws-samples/aws-greengrass-samples
+
+## Code Based on
+* AWS Samples https://github.com/aws-samples/aws-greengrass-samples
 
 ## GreenGrass
 
