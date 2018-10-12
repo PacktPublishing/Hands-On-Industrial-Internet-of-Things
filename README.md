@@ -1,7 +1,7 @@
-# Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2018
+# Hands-On Industrial Internet of Things by Giacomo Veneri & Antonio Capasso,, Packt, 2018
 This repository provide the code of the book
 
-**Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2018**
+**Hands-On Industrial Internet of Things by Giacomo Veneri & Antonio Capasso, Packt, 2018**
 
 ![alt text](https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11397_MockupCover.png)
 
