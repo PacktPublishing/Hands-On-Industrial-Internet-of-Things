@@ -3,8 +3,9 @@ This repository provide the code of the book
 
 **Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2018**
 
+https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11397_MockupCover.png
+
 * Chapter06 : edge nodejs code
-* Chapter07 : opentsdb
 * Chapter08 : custom iiot platform
 * Chapter09 : custom code for Predix Platform
 * Chapter10 : code for  aws & aws-greengrass
@@ -27,11 +28,15 @@ This repository provide the code of the book
 
 # Chapter06
 
-Edge NodeJS 
+Edge NodeJS
 
-# Chapter07
+## Credits
 
-OpenTSDB
+NodeJS OPC-UA - https://github.com/node-opcua/node-opcua
+Docker Edge - https://www.docker.com/solutions/docker-edge
+Python OPC-UA - https://python-opcua.readthedocs.io/en/latest/
+OPC Foundation - https://opcfoundation.org/﻿
+
 
 # Chapter08
 
@@ -96,6 +101,16 @@ docker run --network=iiot-net -P -p 8080:8080 -e "CASS_HOSTS=XXXX:9042" -e "REPF
     }
 ```
 
+## Credits
+
+* Apache Kafka 1.0 Cookbook - Raúl Estrada - December 2017 – Packt
+* Learning Apache Cassandra - Second Edition - Sandeep Yarabarla - April 2017 – Packt
+* Learning Neo4j 3.x - Second Edition - Jérôme Baton, Rik Van Bruggen - October 2017 - Packt
+* https://github.com/wurstmeister/kafka-docker
+* https://github.com/wangdrew/docker-kairosdb
+* https://github.com/kairosdb/kairosdb
+
+
 # Chapter09
 
 ## Predix Custom code for APP code fo src
@@ -127,11 +142,19 @@ ON dashboard.es6.js
 
 then copy the file my-ts-chart-js.html on src
 
+## Credits
+
+
+* https://www.predix-ui.com/px-sample-app/
+* https://github.com/predixdesignsystem/px-sample-app
+* • Predix Meridium Asset model - https://www.meridium.com/secure/documentation/Help/Unified_V1020/Default/Subsystems/PredixAPM_Assets/Content/am_apm_ingest_assets3/c_apm_asset_about_asset_model.htm
+
 # Chapter10
 
 AWS
 
-* based on https://github.com/aws-samples/aws-greengrass-samples
+## Credits
+* AWs Samples https://github.com/aws-samples/aws-greengrass-samples
 
 ## GreenGrass
 
@@ -217,19 +240,34 @@ npm start
 
 GCP
 
+## Credits
+
 # Chapter12
 
 Azure and Azure IoT Edge
 
+## Credits
+* Azure Predictive Maintenence https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/cortana-analytics-playbook-predictive-maintenance
+
 # Chapter13
 
 * anomaly detection analytics of airplane
-* predictive analytics with ARIMA of a refinery
+* predictive analytics with ARIMA of an industry
+
+## Credits
+* https://www.datascience.com/blog/python-anomaly-detection
+* https://en.wikipedia.org/wiki/Exploratory_data_analysis
 
 # Chapter14
 
 * RUL prediction with deep-learning
 * Model of a wind turbine
+
+## Credits
+* https://aws.amazon.com/blogs/big-data/power-from-wind-open-data-on-aws/
+* Digital Twins - https://medium.com/@iskerrett/the-reality-of-digital-twins-for-iot-a89f7a51c6fc
+* GCP Digital Twins - https://cloud.google.com/blog/products/ai-machine-learning/pre-processing-tensorflow-pipelines-tftransform-google-cloud
+* Predix Digital Twins - https://www.ge.com/digital/applications/digital-twin
 
 # Analytics Excercise
 TBD
