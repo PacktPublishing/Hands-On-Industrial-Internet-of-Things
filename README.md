@@ -25,7 +25,13 @@ This repository provide the code of the book
 * NodeJS 8+ - https://nodejs.org
 
 
+# Chapter06
 
+Edge NodeJS 
+
+# Chapter07
+
+OpenTSDB
 
 # Chapter08
 
