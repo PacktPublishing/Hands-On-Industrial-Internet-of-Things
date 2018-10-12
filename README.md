@@ -211,7 +211,7 @@ GCP
 
 # Chapter12
 
-Azuire and Azure IoT Edge
+Azure and Azure IoT Edge
 
 # Chapter13
 
