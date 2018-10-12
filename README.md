@@ -139,6 +139,11 @@ Azure and Azure IoT Edge
 * Digital Twins - https://medium.com/@iskerrett/the-reality-of-digital-twins-for-iot-a89f7a51c6fc
 * GCP Digital Twins - https://cloud.google.com/blog/products/ai-machine-learning/pre-processing-tensorflow-pipelines-tftransform-google-cloud
 * Predix Digital Twins - https://www.ge.com/digital/applications/digital-twin
+* Microsoft Digital Twins - https://enterprise.microsoft.com/en-us/trends/microsoft-is-redefining-digital-twins-in-discrete-manufacturing/
+
+## Code based on
+* https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan
+* https://github.com/umbertogriffo/Predictive-Maintenance-using-LSTM
 
 # Analytics Excercise
 TBD
