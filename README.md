@@ -40,6 +40,7 @@ Edge NodeJS
 ## Code based on
 * NodeJS OPC-UA - https://github.com/node-opcua/node-opcua
 
+***
 
 # Chapter 08
 
@@ -59,6 +60,7 @@ It contains code for a custom I-IOT platform based on Kafka, Cassandra, KairosDB
 * https://github.com/wangdrew/docker-kairosdb
 * https://github.com/kairosdb/kairosdb
 
+***
 
 # Chapter 09
 
@@ -98,6 +100,8 @@ then copy the file my-ts-chart-js.html on src
 * https://github.com/predixdesignsystem/px-sample-app
 * https://www.predix-ui.com/px-sample-app/
 
+***
+
 # Chapter 10
 
 AWS
@@ -110,6 +114,8 @@ AWS
 * AWS Samples https://github.com/aws-samples/aws-greengrass-samples
 
 
+***
+
 # Chapter 11
 
 GCP
@@ -118,12 +124,16 @@ GCP
 
 * Google Cloud Platform Cookbook - Legorie Rajan PS - April 2018 - Packt - https://www.packtpub.com/virtualization-and-cloud/google-cloud-platform-cookbook
 
+***
+
 # Chapter 12
 
 Azure and Azure IoT Edge
 
 ## Credits
 * Azure Predictive Maintenence https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/cortana-analytics-playbook-predictive-maintenance
+
+***
 
 # Chapter 13
 
@@ -133,6 +143,8 @@ Azure and Azure IoT Edge
 ## Credits
 * https://www.datascience.com/blog/python-anomaly-detection
 * https://en.wikipedia.org/wiki/Exploratory_data_analysis
+
+***
 
 # Chapter 14
 
@@ -149,6 +161,8 @@ Azure and Azure IoT Edge
 ## Code based on
 * https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan
 * https://github.com/umbertogriffo/Predictive-Maintenance-using-LSTM
+
+***
 
 # Chapter 15
 TBD
