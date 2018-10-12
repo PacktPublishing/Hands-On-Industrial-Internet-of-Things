@@ -6,13 +6,13 @@ This repository provide the code of the book
 ![alt text](https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11397_MockupCover.png)
 
 * [Chapter06](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter06) : edge nodejs code
-* Chapter08 : custom iiot platform
-* Chapter09 : custom code for Predix Platform
-* Chapter10 : code for  aws & aws-greengrass
-* Chapter11 : code for  gcp
-* Chapter12 : code for  azure & azure-edge
-* Chapter13 : code and data for diagnostic analytics and predictive
-* Chapter14 : code and data for digital twin
+* [Chapter08](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter08) : custom iiot platform
+* [Chapter09](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter09) : custom code for Predix Platform
+* [Chapter10](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter10) : code for  aws & aws-greengrass
+* [Chapter11](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter11) : code for  gcp
+* [Chapter12](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter12) : code for  azure & azure-edge
+* [Chapter13](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter13) : code and data for diagnostic analytics and predictive
+* [Chapter14](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter14) : code and data for digital twin
 
 
 # Prerequisites
