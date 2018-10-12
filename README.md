@@ -103,6 +103,8 @@ AWS
 
 ## Credits
 
+* Learning AWS IoT by Agus Kurniawan - Packt - 2018
+
 ## Code Based on
 * AWS Samples https://github.com/aws-samples/aws-greengrass-samples
 
@@ -112,6 +114,8 @@ AWS
 GCP
 
 ## Credits
+
+* Google Cloud Platform Cookbook - Legorie Rajan PS - April 2018 - Packt - https://www.packtpub.com/virtualization-and-cloud/google-cloud-platform-cookbook
 
 # Chapter12
 
