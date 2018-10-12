@@ -1,11 +1,11 @@
-# Hands-On Industrial Internet of Things by Giacomo Veneri & Antonio Capasso,, Packt, 2018
+# Hands-On Industrial Internet of Things by Giacomo Veneri & Antonio Capasso, Packt, 2018
 This repository provide the code of the book
 
 **Hands-On Industrial Internet of Things by Giacomo Veneri & Antonio Capasso, Packt, 2018**
 
 ![alt text](https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11397_MockupCover.png)
 
-* Chapter06 : edge nodejs code
+* [Chapter06](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter06) : edge nodejs code
 * Chapter08 : custom iiot platform
 * Chapter09 : custom code for Predix Platform
 * Chapter10 : code for  aws & aws-greengrass
@@ -43,7 +43,7 @@ Edge NodeJS
 # Chapter0 8
 
 
-It contains code for a custom IIOT platform based on Kafka, Cassandra, KairosDB and Docker. Further snippet of code:
+It contains code for a custom I-IOT platform based on Kafka, Cassandra, KairosDB and Docker. Further snippet of code:
 
 
 
