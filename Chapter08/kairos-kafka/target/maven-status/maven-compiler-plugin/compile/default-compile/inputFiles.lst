@@ -1,8 +1,0 @@
-/Users/giacomoveneri/Documents/workspace-iiot/iiot-book/platform/kairos-kafka/src/main/java/org/kairosdb/plugin/kafka/GuiceTopicParserFactory.java
-/Users/giacomoveneri/Documents/workspace-iiot/iiot-book/platform/kairos-kafka/src/main/java/org/kairosdb/plugin/kafka/parser/MQTTJsonTopicParserImpl.java
-/Users/giacomoveneri/Documents/workspace-iiot/iiot-book/platform/kairos-kafka/src/main/java/org/kairosdb/plugin/kafka/TopicParserFactory.java
-/Users/giacomoveneri/Documents/workspace-iiot/iiot-book/platform/kairos-kafka/src/main/java/org/kairosdb/plugin/kafka/KafkaModule.java
-/Users/giacomoveneri/Documents/workspace-iiot/iiot-book/platform/kairos-kafka/src/main/java/org/kairosdb/plugin/kafka/parser/StringTopicParserImpl.java
-/Users/giacomoveneri/Documents/workspace-iiot/iiot-book/platform/kairos-kafka/src/main/java/org/kairosdb/plugin/kafka/TopicParser.java
-/Users/giacomoveneri/Documents/workspace-iiot/iiot-book/platform/kairos-kafka/src/main/java/org/kairosdb/plugin/kafka/ConsumerThread.java
-/Users/giacomoveneri/Documents/workspace-iiot/iiot-book/platform/kairos-kafka/src/main/java/org/kairosdb/plugin/kafka/KafkaService.java

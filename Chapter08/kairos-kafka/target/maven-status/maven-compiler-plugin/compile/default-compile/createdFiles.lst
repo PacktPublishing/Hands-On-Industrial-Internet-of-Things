@@ -1,9 +1,0 @@
-org/kairosdb/plugin/kafka/GuiceTopicParserFactory.class
-org/kairosdb/plugin/kafka/KafkaModule.class
-org/kairosdb/plugin/kafka/ConsumerThread.class
-org/kairosdb/plugin/kafka/GuiceTopicParserFactory$TPDefinition.class
-org/kairosdb/plugin/kafka/TopicParser.class
-org/kairosdb/plugin/kafka/parser/StringTopicParserImpl.class
-org/kairosdb/plugin/kafka/parser/MQTTJsonTopicParserImpl.class
-org/kairosdb/plugin/kafka/TopicParserFactory.class
-org/kairosdb/plugin/kafka/KafkaService.class
