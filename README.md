@@ -26,7 +26,7 @@ This repository provide the code of the book
 * NodeJS 8+ - https://nodejs.org
 
 
-# Chapter06
+# Chapter 06
 
 Edge NodeJS
 
@@ -40,7 +40,7 @@ Edge NodeJS
 * NodeJS OPC-UA - https://github.com/node-opcua/node-opcua
 
 
-# Chapter08
+# Chapter0 8
 
 
 It contains code for a custom IIOT platform based on Kafka, Cassandra, KairosDB and Docker. Further snippet of code:
@@ -59,7 +59,7 @@ It contains code for a custom IIOT platform based on Kafka, Cassandra, KairosDB 
 * https://github.com/kairosdb/kairosdb
 
 
-# Chapter09
+# Chapter 09
 
 ## Predix Custom code for APP code fo src
 
@@ -97,7 +97,7 @@ then copy the file my-ts-chart-js.html on src
 * https://github.com/predixdesignsystem/px-sample-app
 * https://www.predix-ui.com/px-sample-app/
 
-# Chapter10
+# Chapter 10
 
 AWS
 
@@ -109,7 +109,7 @@ AWS
 * AWS Samples https://github.com/aws-samples/aws-greengrass-samples
 
 
-# Chapter11
+# Chapter 11
 
 GCP
 
@@ -117,14 +117,14 @@ GCP
 
 * Google Cloud Platform Cookbook - Legorie Rajan PS - April 2018 - Packt - https://www.packtpub.com/virtualization-and-cloud/google-cloud-platform-cookbook
 
-# Chapter12
+# Chapter 12
 
 Azure and Azure IoT Edge
 
 ## Credits
 * Azure Predictive Maintenence https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/cortana-analytics-playbook-predictive-maintenance
 
-# Chapter13
+# Chapter 13
 
 * anomaly detection analytics of airplane
 * predictive analytics with ARIMA of an industry
@@ -133,7 +133,7 @@ Azure and Azure IoT Edge
 * https://www.datascience.com/blog/python-anomaly-detection
 * https://en.wikipedia.org/wiki/Exploratory_data_analysis
 
-# Chapter14
+# Chapter 14
 
 * RUL prediction with deep-learning
 * Model of a wind turbine
@@ -149,6 +149,6 @@ Azure and Azure IoT Edge
 * https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan
 * https://github.com/umbertogriffo/Predictive-Maintenance-using-LSTM
 
-# Analytics Excercise
+# Chapter 15
 TBD
 
