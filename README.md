@@ -3,15 +3,15 @@ This repository provide the code of the book
 
 **Hands-On Industrial Internet of Things, Antonio Capasso & Giacomo Veneri, Packt, 2018**
 
-* edge (**ch6**) : edge nodejs code
-* platform (**ch8**) : custom iiot platform
-* predix (**ch9**) : custom code for Predix Platform
-* cloud : code for 
-  * aws & aws-greengrass (**ch10**) 
-  * gcp (**ch11**) 
-  * azure & azure-edge (**ch12**)
-* analytics (**ch13**) : code and data for diagnostic analytics and predictive
-* digital-twin (**ch14**) : code and data for digital twin
+* Chapter06 : edge nodejs code
+* Chapter07 : opentsdb
+* Chapter08 : custom iiot platform
+* Chapter09 : custom code for Predix Platform
+* Chapter10 : code for  aws & aws-greengrass
+* Chapter11 : code for  gcp
+* Chapter12 : code for  azure & azure-edge
+* Chapter13 : code and data for diagnostic analytics and predictive
+* Chapter14 : code and data for digital twin
 
 
 # Prerequisites
@@ -27,7 +27,7 @@ This repository provide the code of the book
 
 
 
-# Platform
+# Chapter08
 
 
 It contains code for a custom IIOT platform based on Kafka, Cassandra, KairosDB and Docker. Further snippet of code:
@@ -90,7 +90,9 @@ docker run --network=iiot-net -P -p 8080:8080 -e "CASS_HOSTS=XXXX:9042" -e "REPF
     }
 ```
 
-# Predix Custom code for APP code fo src
+# Chapter09
+
+## Predix Custom code for APP code fo src
 
 ON dashboard.html
 
@@ -119,10 +121,9 @@ ON dashboard.es6.js
 
 then copy the file my-ts-chart-js.html on src
 
-# Cloud
+# Chapter10
 
-Devices for Azure, AWS and GCP.
-
+AWS
 
 ## GreenGrass
 
@@ -204,12 +205,20 @@ cd ~/Documents/workspace-iiot/opcua/node-opcua-sampleserver/
 npm start
 ```
 
-# Analytics
+# Chapter11
+
+GCP
+
+# Chapter12
+
+Azuire and Azure IoT Edge
+
+# Chapter13
 
 * anomaly detection analytics of airplane
 * predictive analytics with ARIMA of a refinery
 
-# Digital twin
+# Chapter14
 
 * RUL prediction with deep-learning
 * Model of a wind turbine
