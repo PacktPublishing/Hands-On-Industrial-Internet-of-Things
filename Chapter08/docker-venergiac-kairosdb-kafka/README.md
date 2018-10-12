@@ -1,3 +1,5 @@
+based on https://github.com/wangdrew/docker-kairosdb
+
 docker-kairosdb
 =======
 
