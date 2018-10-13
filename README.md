@@ -44,10 +44,7 @@ Edge NodeJS
 
 # Chapter 08
 
-
 It contains code for a custom I-IOT platform based on Kafka, Cassandra, KairosDB and Docker. Further snippet of code:
-
-
 
 ## Credits
 
@@ -59,6 +56,9 @@ It contains code for a custom I-IOT platform based on Kafka, Cassandra, KairosDB
 * https://github.com/wurstmeister/kafka-docker
 * https://github.com/wangdrew/docker-kairosdb
 * https://github.com/kairosdb/kairosdb
+* https://hub.docker.com/r/venergiac/kafka-mqtt-connector/
+* https://hub.docker.com/r/venergiac/kairosdb/
+
 
 ***
 
@@ -165,5 +165,10 @@ Azure and Azure IoT Edge
 ***
 
 # Chapter 15
+
+* Deploying an anomaly detection algorithm on Azure ML
+* Deploying a RUL estimation algorithm on AWS Sagemaker
+
+## Credits
 TBD
 
