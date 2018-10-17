@@ -7,7 +7,9 @@ This repository provide the code of the book
 
 This folder contains 
 
-* algorithms to develop predictive analytics and anomaly dettection analytics based on Machine Learning and Python.
+* algorithms described in the book to develop 
+   * predictive analytics and 
+   * anomaly dettection analytics based on Machine Learning and Python.
 * data.
 * Jupyter Notebook of the algorithms
 
@@ -47,4 +49,4 @@ To run Jupyter
 jupyter notebook
 ```
 
-Then open the notebook saved
+Then open the IPython notebook saved.
