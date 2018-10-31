@@ -168,4 +168,3 @@ Azure and Azure IoT Edge
 
 * Deploying an anomaly detection algorithm on Azure ML
 * Deploying a RUL estimation algorithm on AWS Sagemaker
-
