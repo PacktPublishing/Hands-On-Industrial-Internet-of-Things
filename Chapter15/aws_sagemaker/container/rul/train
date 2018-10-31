@@ -1,0 +1,158 @@
+#!/usr/bin/env python3
+
+# A sample training component that trains a simple ANN.
+# This implementation works in File mode and makes no assumptions about the input file names.
+# Input is specified as csv with a data point in each row and the labels in the first column.
+
+from __future__ import print_function
+
+import os
+import json
+import pickle
+import sys
+import traceback
+
+import pandas as pd
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers import Dense
+
+#fit the model
+import math
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import mean_squared_error
+
+# avoid warning
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+# These are the paths to where SageMaker mounts interesting things in your container.
+
+prefix = '/opt/ml/'
+
+input_path = prefix + 'input/data'
+output_path = os.path.join(prefix, 'output')
+model_path = os.path.join(prefix, 'model')
+param_path = os.path.join(prefix, 'input/config/hyperparameters.json')
+
+# This algorithm has a single channel of input data called 'training'. Since we run in
+# File mode, the input files are copied to the directory specified here.
+channel_name='training'
+training_path = os.path.join(input_path, channel_name)
+
+# data columns
+columns = ['unitid', 'time', 'set_1','set_2','set_3']
+columns.extend(['sensor_' + str(i) for i in range(1,22)])
+
+# prepare model
+columns_feature=['sensor_4','sensor_7']
+
+
+# RUL estimation functions
+def prepare_dataset(dataframe, columns):
+    dataframe = dataframe[columns]
+    dataset = dataframe.values
+    dataset = dataset.astype('float32')
+
+    # normalize the dataset
+    scaler = MinMaxScaler(feature_range=(0, 1))
+    dataset = scaler.fit_transform(dataset)
+    return dataset
+
+def build_model(input_dim):
+    # create model
+    model = Sequential()
+    model.add(Dense(16, input_dim=input_dim, activation='relu'))
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(1, activation='sigmoid'))
+
+    # Compile model
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    return model
+
+def create_train_dataset(dataset):
+      dataX, dataY = [], []
+      start=len(dataset)
+      for i in range(len(dataset)):
+            a=dataset[i]
+            b=(start-i) / start
+            dataX.append(a)
+            dataY.append(b)
+            
+      return np.array(dataX), np.array(dataY)
+
+def train_model(model, dataset):
+
+    # create the dataset
+    trainX, trainY = create_train_dataset(dataset)
+
+    # Fit the model
+    model.fit(trainX, trainY, epochs=150, batch_size=10, verbose=1)
+    
+    # make predictions
+    trainPredict = model.predict(trainX)
+
+        # calculate root mean squared error
+    trainScore = math.sqrt(mean_squared_error(trainY, trainPredict[:,0]))
+    print('Train Score: %.2f RMSE' % (trainScore))
+    return model
+
+# The function to execute the training.
+def train():
+    print('Starting the training.')
+    try:
+        # Read in any hyperparameters that the user passed with the training job
+        with open(param_path, 'r') as tc:
+            trainingParams = json.load(tc)
+
+        # Take the set of files and read them all into a single pandas dataframe
+        input_files = [ os.path.join(training_path, file) for file in os.listdir(training_path) if file.endswith('.csv') ]
+        if len(input_files) == 0:
+            raise ValueError(('There are no files in {}.\n' +
+                              'This usually indicates that the channel ({}) was incorrectly specified,\n' +
+                              'the data specification in S3 was incorrectly specified or the role specified\n' +
+                              'does not have permission to access the data.').format(training_path, channel_name))
+        
+
+        print('found %s' % input_files)
+
+        raw_data = [ pd.read_csv(file, header=None, names=columns, sep=',') for file in input_files ]
+        print(raw_data)
+
+        # read data
+        dataset_train = pd.concat(raw_data)
+
+        # build the model
+        print('Building model ...')
+        model=build_model(len(columns_feature))
+
+        # prepare data set
+        print('Preparing ...')
+        dataset_train= prepare_dataset(dataset_train,columns_feature)
+
+        # train the model
+        print('Training ...')
+        model=train_model(model, dataset_train)
+
+
+        # save the model
+        model.save(os.path.join(model_path, 'rul-model.h5'))
+        print('Training complete.')
+
+    except Exception as e:
+        # Write out an error file. This will be returned as the failureReason in the
+        # DescribeTrainingJob result.
+        trc = traceback.format_exc()
+        with open(os.path.join(output_path, 'failure'), 'w') as s:
+            s.write('Exception during training: ' + str(e) + '\n' + trc)
+        # Printing this causes the exception to be in the training job logs, as well.
+        print('Exception during training: ' + str(e) + '\n' + trc, file=sys.stderr)
+        # A non-zero exit code causes the training job to be marked as Failed.
+        sys.exit(255)
+
+if __name__ == '__main__':
+    train()
+
+    # A zero exit code causes the job to be marked a Succeeded.
+    sys.exit(0)
