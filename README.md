@@ -12,14 +12,15 @@ This repository provide the code of the book
 * [Chapter11](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter11) : code for  gcp
 * [Chapter12](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter12) : code for  azure & azure-edge
 * [Chapter13](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter13) : code and data for diagnostic analytics and predictive
-* [Chapter14](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter14) : code and data for digital twin
+* [Chapter14](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter14) : code and data for adavanced analytics
+* [Chapter15](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter15) : jupyter notebooks for sagemaker and azure ml
 
 
 # Prerequisites
 
 * Git - https://git-scm.com/downloads
 * Python 3.7 - https://www.python.org/downloads/
-* Anaconda 5.2 - https://www.anaconda.com/download/
+* Anaconda 5.3 - https://www.anaconda.com/download/
 * Docker Community Edition - https://store.docker.com
 * JDK 1.8 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 * Git - https://git-scm.com/downloads
@@ -166,5 +167,9 @@ Azure and Azure IoT Edge
 
 # Chapter 15
 
-* Deploying an anomaly detection algorithm on Azure ML
+* Deploying a wind turbine model algorithm on Azure ML
+* Deploying a data driven wind turbine model algorithm on Azure ML
 * Deploying a RUL estimation algorithm on AWS Sagemaker
+
+## Code based on
+Chapter 13 and Chapter 14.
