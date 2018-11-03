@@ -45,7 +45,7 @@ Edge NodeJS
 
 # Chapter 08
 
-It contains code for a custom I-IOT platform based on Kafka, Cassandra, KairosDB and Docker. Further snippet of code:
+It contains code for a custom I-IOT platform based on Kafka, Cassandra, KairosDB and Docker.
 
 ## Credits
 
