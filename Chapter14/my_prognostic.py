@@ -62,7 +62,7 @@ def show_feature(df):
     plt.show()
 
 
-#show_feature(df)
+show_feature(df)
 
 # selected fetures
 from sklearn.feature_selection import RFE
