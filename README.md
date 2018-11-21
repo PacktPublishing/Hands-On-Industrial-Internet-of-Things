@@ -82,7 +82,7 @@ ON dashboard.html
 <my-timeseries-chart tags="[[tags]]" selected-tag="[[tags[0]]]"></my-timeseries-chart>
 ```
 
-ON dashboard.es6.js
+On dashboard.es6.js
 
 ```
 ....
@@ -113,7 +113,7 @@ then copy the file my-ts-chart-js.html on src
 
 # Chapter 10
 
-AWS
+AWS and AWS Greengrass
 
 ## Credits
 
