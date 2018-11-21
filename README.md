@@ -3,7 +3,7 @@ This repository provide the code of the book
 
 **Hands-On Industrial Internet of Things by Giacomo Veneri & Antonio Capasso, Packt, 2018**
 
-![alt text](https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11397_MockupCover.png)
+![alt text](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/blob/master/cover.png)
 
 * [Chapter06](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter06) : edge nodejs code
 * [Chapter07](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter07) : Docker and OpenTSDB
