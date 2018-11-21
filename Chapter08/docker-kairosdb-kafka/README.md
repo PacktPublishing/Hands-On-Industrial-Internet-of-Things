@@ -1,7 +1,7 @@
-based on https://github.com/wangdrew/docker-kairosdb
 
-docker-kairosdb
-=======
+
+# docker-kairosdb
+==
 
 ## Requirements
 
@@ -17,3 +17,7 @@ Dockerized cassandra
 ## Run
 
     docker run -d -p 8080:8080 -p 4242:4242 --name kairos kairosdb
+
+## Credits
+
+Based on https://github.com/wangdrew/docker-kairosdb

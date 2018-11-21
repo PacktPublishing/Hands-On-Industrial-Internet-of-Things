@@ -26,3 +26,8 @@ docker create network kairos-net
 docker run --network=kairos-net -p 9042:9042 -p 9160:9160 --name cassandra0 cassandra
 docker run --network=kairos-net -P -p 8080:8080 -e "CASS_HOSTS=cassandra0:9160" -e "REPFACTOR=1" iiot-book/kairosdb
 ```
+
+
+## Credits
+
+Mesosphere https://github.com/mesosphere/docker-archlinux-kairosdb
