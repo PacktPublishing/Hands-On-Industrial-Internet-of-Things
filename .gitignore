@@ -3,3 +3,4 @@ node_modules
 **/*.log
 **/node_modules
 **/target
+Chapter13/.ipynb_checkpoints Chapter14/.ipynb_checkpoints

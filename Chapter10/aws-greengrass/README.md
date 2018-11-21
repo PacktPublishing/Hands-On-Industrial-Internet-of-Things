@@ -10,6 +10,25 @@ sudo wget -O root.ca.pem http://www.symantec.com/content/en/us/enterprise/verisi
 cp root.ca.pem certs/
 ```
 
+### index.js
+
+Code of index.js
+
+```
+const configSet = { 
+    server: {
+        name: 'server',
+        url: 'opc.tcp://localhost:26543',
+    }, 
+    subscriptions: [
+        { 
+        name: 'Temperature',
+        nodeId: 'ns=1;s=Temperature',
+        }, 
+    ], 
+};
+```
+
 ### Vagrant
 run on Ubuntu with Vagrant
 

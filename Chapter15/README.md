@@ -33,6 +33,8 @@ pip install matplotlib
 pip install seaborn
 pip install scipy
 pip install scikit
+pip install boto3
+pip install sagemaker
 ```
 
 ## Jupyter Notebook
