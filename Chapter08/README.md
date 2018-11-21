@@ -2,31 +2,15 @@
 
 # Chapter 08
 
-## Timeseries curl
+How to build a custom I-IoT solution with
 
-```
-curl -d '{"metric": "sys.cpu", "timestamp": 1529176746, "value": 90, "tags": {"host": "localhost", "quality" : "GOOD"} }' \
-  -H "Content-Type: application/json" \
-  -X POST http://localhost:4242/api/put
+* Docker
+* KairosDB
+* Airflow
+* Kafka
+* Cassandra
+* Mosquitto
 
-curl -d '{"metric": "sys.cpu", "timestamp": 1529176756, "value": 100, "tags": {"host": "localhost", "quality" : "GOOD"} }' \
-  -H "Content-Type: application/json" \
-  -X POST http://localhost:4242/api/put
-
-  curl -d '{"metric": "sys.cpu", "timestamp": 1529176766, "value": 110, "tags": {"host": "localhost", "quality" : "GOOD"} }' \
-  -H "Content-Type: application/json" \
-  -X POST http://localhost:4242/api/put
-
-
-curl -d '{"metric": "sys.cpu", "timestamp": 1529176776, "value": 111, "tags": {"host": "localhost", "quality" : "GOOD"} }' \
-  -H "Content-Type: application/json" \
-  -X POST http://localhost:4242/api/put
-
-
-curl -d '{"metric": "sys.cpu", "timestamp": 1529176876, "value": 211, "tags": {"host": "localhost", "quality" : "GOOD"} }' \
-  -H "Content-Type: application/json" \
-  -X POST http://localhost:4242/api/put
-```
 
 ## Run mosquito
 ```
@@ -35,7 +19,21 @@ docker run -it -p 1883:1883 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mos
 docker run -it -p 1883:1883 -p 9001:9001  eclipse-mosquitto
 ```
 
-## Run cassandra
+## MQTT Calls
+```
+mqtt-cli localhost topic/device0 "device0.my.measure.temperature,27,GOOD"
+```
+
+## KairosDB  configuration - <KAFKA_HOME>/conf/kairosdb.properties
+
+```
+#kairosdb.service.datastore=org.kairosdb.datastore.h2.H2Module
+kairosdb.datastore.concurrentQueryThreads=5
+kairosdb.service.datastore=org.kairosdb.datastore.cassandra.CassandraModule
+```
+
+
+## Run kairosdb on cassandra
 ```
 docker network create iiot-net
 docker run --network=iiot-net -it -p 1883:1883 -p 9001:9001  --name mqtt0 eclipse-mosquitto
@@ -47,15 +45,22 @@ docker run --network=iiot-net -P -p 8080:8080 -e "CASS_HOSTS=cassandra0:9042" -e
 docker run --network=iiot-net -P -p 8080:8080 -e "CASS_HOSTS=XXXX:9042" -e "REPFACTOR=1" iiot-book/kairosdb
 ```
 
-## Kafka
+## Call to ingest data
+
 ```
-    if (value instanceof Double) {
-      point = new DoubleDataPoint(ts,(Double)value);
-    } else if (value instanceof Integer) {
-      point = new DoubleDataPoint(ts,(Integer)value);
-    } else if (value instanceof Long) {
-      point = new DoubleDataPoint(ts,(Long)value);
-    } else if (value instanceof String) {
-      point = new StringDataPoint(ts,(String)value);
-    }
+curl -d '[ {
+         "name": "device0.my.measure.temperature",
+         "datapoints": [[1529596511000, 11], [1529596525000, 13.2],
+   [1529596539000, 23.1]],
+         "tags": {
+             "host": "localhost",
+             "data_center": "DC1",
+             "quality" : "GOOD"
+},
+         "ttl": 300
+     }]' -H "Content-Type: application/json" -X POST
+   http://localhost:8080/api/v1/datapoints
+
 ```
+
+
