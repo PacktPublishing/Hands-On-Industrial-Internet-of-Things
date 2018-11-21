@@ -1,4 +1,4 @@
-venergiac/kairosdb
+iiotbook/kairosdb
 =============================
 
 Dockerfile to run KairosDB on Cassandra. Configuration is done through environment variables.
@@ -20,7 +20,7 @@ The following environment variables can be set
     $PORT_HTTP            [kairosdb.jetty.port] (default: 8080)
                           Port to bind for http server
 ```
-#Sample Usage:
+# Sample Usage:
 ```
 docker create network kairos-net
 docker run --network=kairos-net -p 9042:9042 -p 9160:9160 --name cassandra0 cassandra
