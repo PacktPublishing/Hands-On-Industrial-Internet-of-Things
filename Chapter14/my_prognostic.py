@@ -64,7 +64,7 @@ def show_feature(df):
 
 #show_feature(df)
 
-#Selecte fetures
+# selected fetures
 from sklearn.feature_selection import RFE
 from sklearn.ensemble import RandomForestRegressor
 
@@ -86,7 +86,7 @@ def select_feature(df):
             print(names[i])
 
 
-#select_feature(df)
+select_feature(df)
 
 
 # fit the model
