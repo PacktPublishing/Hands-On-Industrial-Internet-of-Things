@@ -9,7 +9,7 @@ from azureml.core.model import Model
 
 def wind_turbine_model(x):
 
-    # cut-in pseed vs cut-out speed
+    # cut-in speed vs cut-out speed
     if x<4.5 or x>21.5:
         return 0.0
 
