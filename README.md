@@ -36,7 +36,7 @@ echo "<html><body>I-IoT</body></html>" > static/index.html
 **Following is what you need for this book:**
 This book is intended for architects, developers or data scientists working in the industrial sector. This book assumes that the reader has knowledge of Python, JavaScript, NodeJS, and Java, along with a basic knowledge of networking, enterprise architecture, machine learning, and electronic concepts.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-11).
+With the following software and hardware list you can run all code files present in the book (Chapter 1-15).
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
