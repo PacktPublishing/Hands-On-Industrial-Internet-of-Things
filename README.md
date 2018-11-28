@@ -1,183 +1,79 @@
-# Hands-On Industrial Internet of Things by Giacomo Veneri & Antonio Capasso, Packt, 2018
-This repository provide the code of the book
+# Implementing-Azure-Solutions-Second-Edition
 
-**Hands-On Industrial Internet of Things by Giacomo Veneri & Antonio Capasso, Packt, 2018**
+<a href="https://www.packtpub.com/virtualization-and-cloud/implementing-azure-solutions-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789343045"><img src="https://www.packtpub.com/sites/default/files/B11195.png" alt="Implementing Azure Solutions Second Edition" height="256px" align="right"></a>
 
-![alt text](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/blob/master/cover.png)
+This is the code repository for [Implementing Azure Solutions Second Edition](https://www.packtpub.com/virtualization-and-cloud/implementing-azure-solutions-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789343045), published by Packt.
 
-* [Chapter06](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter06) : edge nodejs code
-* [Chapter07](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter07) : Docker and OpenTSDB
-* [Chapter08](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter08) : custom iiot platform
-* [Chapter09](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter09) : custom code for Predix Platform
-* [Chapter10](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter10) : code for  aws & aws-greengrass
-* [Chapter11](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter11) : code for  gcp
-* [Chapter12](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter12) : code for  azure & azure-edge
-* [Chapter13](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter13) : code and data for diagnostic analytics and predictive
-* [Chapter14](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter14) : code and data for adavanced analytics
-* [Chapter15](https://github.com/PacktPublishing/Hands-On-Industrial-Internet-of-Things/tree/master/Chapter15) : jupyter notebooks for sagemaker and azure ml
+**Deploy and manage Azure containers and build Azure solutions with ease**
 
+## What is this book about?
+Microsoft Azure has numerous effective solutions but the biggest challenge that architects and administrators face is implementing these solutions appropriately. This book focuses on various scenarios that will help overcome the challenge of implementing Azure solutions while helping you prepare for Microsoft Architect exam. The readers will come across standard and advanced implementation techniques such as Implementing Azure App Services, Azure Functions and Azure Networking Services & IoT solutions.
 
-# Prerequisites
+This book covers the following exciting features:
+* Create and manage a Kubernetes cluster in Azure Kubernetes Service (AKS)
+* Implement site-to-site VPN and ExpressRoute connections in your environment
+* Explore the best practices in building and deploying app services
+* Use Telemetry to monitor your Azure Solutions
+* Design an Azure IoT solution and learn how to operate in different scenarios
+* Implement a Hybrid Azure Design using Azure Stack
 
-* Git - https://git-scm.com/downloads
-* Python 3.7 - https://www.python.org/downloads/
-* Anaconda 5.3 - https://www.anaconda.com/download/
-* Docker Community Edition - https://store.docker.com
-* JDK 1.8 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-* Git - https://git-scm.com/downloads
-* NodeJS 8+ - https://nodejs.org
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1789343046) today!
 
-***
+<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
+alt="https://www.packtpub.com/" border="5" /></a>
 
-# Chapter 06
+## Instructions and Navigations
+All of the code is organized into folders. For example, Chapter02.
 
-Edge NodeJS
-
-## Credits
-
-* Docker Edge - https://www.docker.com/solutions/docker-edge
-* Python OPC-UA - https://python-opcua.readthedocs.io/en/latest/
-* OPC Foundation - https://opcfoundation.org/﻿
-
-## Code based on
-* NodeJS OPC-UA - https://github.com/node-opcua/node-opcua
-
-
-***
-
-# Chapter 08
-
-It contains examples to work with Docker and OpenTSDB
-
-***
-
-# Chapter 08
-
-It contains code for a custom I-IOT platform based on Kafka, Cassandra, KairosDB and Docker.
-
-## Credits
-
-* Apache Kafka 1.0 Cookbook - Raúl Estrada - December 2017 – Packt
-* Learning Apache Cassandra - Second Edition - Sandeep Yarabarla - April 2017 – Packt
-* Learning Neo4j 3.x - Second Edition - Jérôme Baton, Rik Van Bruggen - October 2017 - Packt
-
-## Code Based on
-* https://github.com/wurstmeister/kafka-docker
-* https://github.com/wangdrew/docker-kairosdb
-* https://github.com/kairosdb/kairosdb
-* https://hub.docker.com/r/venergiac/kafka-mqtt-connector/
-* https://hub.docker.com/r/venergiac/kairosdb/
-
-
-***
-
-# Chapter 09
-
-## Predix Custom code for APP code fo src
-
-ON dashboard.html
+The code will look like the following:
+```
+"parameters": { 
+    "storageAccountName": { 
+      "type": "string", 
+      "metadata": { 
+        "description": "Storage Account Name" 
+      } 
+    } 
+} 
 
 ```
-<link rel="import" href="./my-ts-chart-js.html" />
-<my-timeseries-chart tags="[[tags]]" selected-tag="[[tags[0]]]"></my-timeseries-chart>
-```
 
-On dashboard.es6.js
+**Following is what you need for this book:**
+Learning from a book only works if you have the opportunity to implement what you have learned in practice. That's why you need an Azure subscription. To do this at no cost, you can use a free Azure trial from https://azure.microsoft.com/en-us/free/. To understand parts of the book, you also need an installation of Visual Studio. You can use any edition of Visual Studio. To avoid unnecessary costs, I recommend using the free Visual Studio Community Edition from https://www.visualstudio.com/downloads/.
 
-```
-....
-      ,
-      tags: {
-        type: Array,
-        value: function() {
-          return [{val: "Light", key: "WR-IDP-F0F1:light", unit: "Lumen"},
-          {val: "Temperature", key: "WR-IDP-F0F1:temperature", unit: "Celsius"},
-          {val: "Sound", key: "WR-IDP-F0F1:sound", unit: "dB"}, 
-          {val: "Angle", key: "WR-IDP-F0F1:rotaryangle",unit: "Degree"}];
-        }
-      },
-
-      ...
-```
-
-then copy the file my-ts-chart-js.html on src
-
-## Credits
-* Predix Meridium Asset model - https://www.meridium.com/secure/documentation/Help/Unified_V1020/Default/Subsystems/PredixAPM_Assets/Content/am_apm_ingest_assets3/c_apm_asset_about_asset_model.htm
-
-## Code Based on
-* https://github.com/predixdesignsystem/px-sample-app
-* https://www.predix-ui.com/px-sample-app/
-
-***
-
-# Chapter 10
-
-AWS and AWS Greengrass
-
-## Credits
-
-* Learning AWS IoT by Agus Kurniawan - Packt - 2018
-
-## Code Based on
-* AWS Samples https://github.com/aws-samples/aws-greengrass-samples
+With the following software and hardware list you can run all code files present in the book (Chapter 1-11).
+### Software and Hardware List
+| Chapter | Software required | OS required |
+| -------- | ------------------------------------ | ----------------------------------- |
+| 1-11 | Microsoft Azure Account, Visual Studio Community Edition | Computer with Windows, Linux or macOS |
 
 
-***
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789343045_ColorImages.pdf).
 
-# Chapter 11
+### Related products <Paste books from the Other books you may enjoy section>
+* Hands-On Data Science and Python Machine Learning [[Packt]](https://www.packtpub.com/big-data-and-business-intelligence/hands-data-science-and-python-machine-learning?utm_source=github&utm_medium=repository&utm_campaign=9781787280748) [[Amazon]](https://www.amazon.com/dp/1787280748)
 
-GCP
+* Kali Linux Cookbook - Second Edition [[Packt]](https://www.packtpub.com/networking-and-servers/kali-linux-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781784390303) [[Amazon]](https://www.amazon.com/dp/1784390305)
+## Get to Know the Authors
+**Florian Klaffenbach**
+ is currently working as Technology Solutions Professional at Microsoft. He is one of the well-known experts when it comes to hybrid cloud scenarios, cloud connectivity, and cloud environment optimization. Before he started at Microsoft, he worked at several companies in different roles, like as technical Community Manager and Solution Expert at Dell or Solutions Architect at CGI Germany. He is also one of Packt's authors and worked on books like Implementing Azure Solutions first and second edition and multi-cloud for architect. He spends his free time with his wife and little son and is currently waiting for his second son.
 
-## Credits
+**Markus Klein**
+ is working as Technology Solution Specialist at Microsoft Germany, specialized on Azure and Hybrid Azure scenarios. He is passionate about Microsoft technology for more than 20 years, starting with System Center, Service Provider Foundation, KATAL, Azure Pack, Azure, and later Azure Stack. Before joining Microsoft he has been working as Architect at Microsoft Cloud Partners. In 2007 he founded a cloud community and was the co-founder of some Azure meetups, too. He has been recognized as an MVP in Cloud and datacenter management for seven years before he joined Microsoft. You can find him as a speaker at conferences in Europe and abroad. He likes to support the community and is a regular blogger.
+ 
 
-* Google Cloud Platform Cookbook - Legorie Rajan PS - April 2018 - Packt - https://www.packtpub.com/virtualization-and-cloud/google-cloud-platform-cookbook
+**Sebastian Hoppe**
+ passion for IT topics started almost 20 years ago with Linux derivates and Linux based server hosting. About 12 years ago his path led him to software development topics and he co-founded a software development company. Since then he can look back on a broad range of projects and topics and is still passionate about software development topics such as web-development and DevOps. Today he is working as a Lead IT Consultant and Architect for Azure and Office 365 and is involved in many projects in different business sectors. He is also a Microsoft Certified Trainer and likes to share his knowledge in training, workshops and as a speaker on events. You can follow him on twitter @_derhoppe.
+ 
+ **Oliver Michalski**
+started in 1999 with his IT carrier as a Web Developer. Now, he is a Senior Software Engineer for Microsoft .NET and an SOA Architect. He also works as an Independent Enterprise Consultant in the field Microsoft Azure. When he started in 2011 with Microsoft Azure, there was no Azure Community on the German market. Therefore, Oliver founded the Azure Community Germany (ACD). Oliver is Chairman of the Azure Community Germany, and since April 2016 and July 2017, he has been a Microsoft Most Valuable Professional for Microsoft Azure. Oliver is author (co-author) of Implementing Azure Solutions and Implementing Azure Cloud Design Patterns, both available from Packt Publishing.
+ 
+ **Jan-Henrik Damaschke**
+ is an IT Consultant for Security, Network, and Infrastructure from Germany. He was MVP awarded in the categories of Enterprise Security, PowerShell, and AzureStack. PKI implementation and management is one of his core competencies as well as cloud-related security. He writes articles on security-related topics and is involved in many community events as a speaker as well as an organizer. He is passionate about sharing knowledge with others. For this purpose, he is member of the Microsoft Student Partner program and is engaged on forums and on other platforms. He was also the author on the first edition of this book Implementing Azure Solutions.
+ 
 
-***
+# Other book by the author
+* [Implementing Azure Solutions](https://www.packtpub.com/virtualization-and-cloud/implementing-azure-solutions?utm_source=github&utm_medium=repository&utm_campaign=9781786467850)
 
-# Chapter 12
-
-Azure and Azure IoT Edge
-
-## Credits
-* Azure Predictive Maintenence https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/cortana-analytics-playbook-predictive-maintenance
-
-***
-
-# Chapter 13
-
-* anomaly detection analytics of airplane
-* predictive analytics with ARIMA of an industry
-
-## Credits
-* https://www.datascience.com/blog/python-anomaly-detection
-* https://en.wikipedia.org/wiki/Exploratory_data_analysis
-
-***
-
-# Chapter 14
-
-* RUL prediction with deep-learning
-* Model of a wind turbine
-
-## Credits
-* https://aws.amazon.com/blogs/big-data/power-from-wind-open-data-on-aws/
-* Digital Twins - https://medium.com/@iskerrett/the-reality-of-digital-twins-for-iot-a89f7a51c6fc
-* GCP Digital Twins - https://cloud.google.com/blog/products/ai-machine-learning/pre-processing-tensorflow-pipelines-tftransform-google-cloud
-* Predix Digital Twins - https://www.ge.com/digital/applications/digital-twin
-* Microsoft Digital Twins - https://enterprise.microsoft.com/en-us/trends/microsoft-is-redefining-digital-twins-in-discrete-manufacturing/
-
-## Code based on
-* https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan
-* https://github.com/umbertogriffo/Predictive-Maintenance-using-LSTM
-
-***
-
-# Chapter 15
-
-* Deploying a wind turbine model algorithm on Azure ML
-* Deploying a data driven wind turbine model algorithm on Azure ML
-* Deploying a RUL estimation algorithm on AWS Sagemaker
-
-## Code based on
-Chapter 13 and Chapter 14.
+### Suggestions and Feedback
+[Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
