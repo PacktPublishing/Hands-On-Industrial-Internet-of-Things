@@ -1,6 +1,6 @@
 # Hands-On-Industrial-Internet-of-Things
 
-<a href="https://www.packtpub.com/virtualization-and-cloud/implementing-azure-solutions-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789343045"><img src="https://www.packtpub.com/sites/default/files/B11195.png" alt="Implementing Azure Solutions Second Edition" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/virtualization-and-cloud/implementing-azure-solutions-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789343045"><img src="https://packt-type-cloud.s3.amazonaws.com/uploads/sites/2697/2018/11/cover-1.png" alt="Implementing Azure Solutions Second Edition" height="256px" align="right"></a>
 
 This is the code repository for [Hands-On-Industrial-Internet-of-Things](https://www.packtpub.com/virtualization-and-cloud/implementing-azure-solutions-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789343045), published by Packt.
 
