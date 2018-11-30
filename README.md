@@ -1,8 +1,8 @@
 # Hands-On-Industrial-Internet-of-Things
 
-<a href="https://www2.packtpub.com/hardware-and-creative/hands-industrial-internet-things"><img src="https://packt-type-cloud.s3.amazonaws.com/uploads/sites/2697/2018/11/cover-1.png" alt="Implementing Azure Solutions Second Edition" height="256px" align="right"></a>
+<a href="https://www2.packtpub.com/hardware-and-creative/hands-industrial-internet-things"><img src="https://packt-type-cloud.s3.amazonaws.com/uploads/sites/2697/2018/11/cover-1.png" alt="Hands On Industrial Internet of Things" height="256px" align="right"></a>
 
-This is the code repository for [Hands-On-Industrial-Internet-of-Things](), published by Packt.
+This is the code repository for [Hands-On-Industrial-Internet-of-Things](<a href="https://www2.packtpub.com/hardware-and-creative/hands-industrial-internet-things">), published by Packt.
 
 **Create a powerful Industrial IoT infrastructure using Industry 4.0**
 
