@@ -1,6 +1,6 @@
 # Hands-On-Industrial-Internet-of-Things
 
-<a href="https://www2.packtpub.com/hardware-and-creative/hands-industrial-internet-things?utm_source=github&utm_medium=repository&utm_campaign=9781789537222"><img src="https://www2.packtpub.com/sites/default/files/B11397.png" alt="Hands-On Industrial Internet of Things" height="256px" align="right"></a>
+<a href="https://www2.packtpub.com/hardware-and-creative/hands-industrial-internet-things?utm_source=github&utm_medium=repository&utm_campaign=9781789537222"><img src="./cover.png" alt="Hands-On Industrial Internet of Things" height="256px" align="right"></a>
 
 This is the code repository for [Hands-On Industrial Internet of Things](https://www2.packtpub.com/hardware-and-creative/hands-industrial-internet-things?utm_source=github&utm_medium=repository&utm_campaign=9781789537222), published by Packt.
 
