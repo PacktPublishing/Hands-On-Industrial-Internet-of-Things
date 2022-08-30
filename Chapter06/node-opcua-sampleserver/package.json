@@ -4,7 +4,7 @@
   "description": "Simple OPCUA Server made with node-opcua",
   "main": "server.js",
   "dependencies": {
-    "node-opcua": "~0.4.4"
+    "node-opcua": "~2.74.0"
   },
   "devDependencies": {},
   "scripts": {
