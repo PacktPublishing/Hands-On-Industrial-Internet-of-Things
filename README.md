@@ -1,3 +1,15 @@
+
+### Get this product for $5
+
+<i>Packt is having its biggest sale of the year. Get this eBook or any other book, video, or course that you like just for $5 each</i>
+
+
+<b><p align='center'>[Buy now](https://packt.link/9781789537222)</p></b>
+
+
+<b><p align='center'>[Buy similar titles for just $5](https://subscription.packtpub.com/search)</p></b>
+
+
 # Hands-On-Industrial-Internet-of-Things
 
 <a href="https://www2.packtpub.com/hardware-and-creative/hands-industrial-internet-things?utm_source=github&utm_medium=repository&utm_campaign=9781789537222"><img src="./cover.png" alt="Hands-On Industrial Internet of Things" height="256px" align="right"></a>
